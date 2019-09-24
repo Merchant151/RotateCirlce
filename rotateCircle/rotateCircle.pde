@@ -19,11 +19,11 @@ void draw(){
 
 void rotate1(float theta, PVector point){
   float newX, newY;
-  //theta = convertDegreesToRadians(theta);
+  theta = convertDegreesToRadians(theta);
   //System.out.println(point.x+" "+point.y);
   //Use the formulas for rotation
-  newX = point.x*cos(radians(theta)) - point.y * sin(radians(theta));
-  newY = point.x*sin(radians(theta)) + point.y * cos(radians(theta));
+  newX = point.x*cos(theta) - point.y * sin(theta);
+  newY = point.x*sin(theta) + point.y * cos(theta);
   
   point.x = newX;
   point.y = newY;
